@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ConfigManagementPlugin
+metadata:
+  name: sops
+spec:
+  version: v1.0
+  generate:
+    command: ["sh"]
+    args: ["/script/decrypt.sh"]
+  discover:
+    find:
+      glob: "**/*"
+      #glob: ".sops.yaml" # TODO: check repository root for this file
+  allowConcurrency: true
+  lockRepo: false

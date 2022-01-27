@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: example
+data:
+    password: ENC[AES256_GCM,data:ayeI/Cfujop1oBKUka4iSF2FYdM=,iv:40xPQNPiZkklAMpE7mVryeUYcFqWHjJgCNPMLycGE7E=,tag:4pT+zSeszNhwbY2l/BUifQ==,type:str]
+    someotherValue: Tm9OZWVkVG9FbmNyeXB0
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age10efzgcr0e55nvlxx5jlsr9gf2gx7cexnqqwtkx7efm04u6t5e5kq7yvdl4
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWeHd4SkFkaHBWeXp0a3Vs
+            QXRjUlpTYm1EdnhST3RUM1lJdzRMbUV2T1JNCk9vZlA5M3NaK0JRbDV5TzBJeTcw
+            cmhVUVVxbCtJUlBReWE2U2dVVHRYZncKLS0tIHhsMTdNdXFacjhpaW50NytXQmlL
+            MDZ1bytVM09MSUJUd1hxN2hIc1ZueFUKo/Y6B3ho59UbVywf2EAl82cxLxbpJZmn
+            JkQdhYPt0+7jZ0WbP9nCIKpMrREyVL5awUSb097P3ZgE3ofq1o8eNw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-01-29T22:38:34Z"
+    mac: ENC[AES256_GCM,data:ovZcy6KxZ0PH5Y/ETneSqV8qG5++Y+M88iU27W1QRYdoiMK5RlL6rHCZOmEHYMOW9J2RXxTpnD9QYRFbCWAPS7aY5tWIYNeKDYjxFMfosZjXakRT0sUrRBHqQ1xw6e+ijbWvobE+lw2k+qC2tVWe5WwyMNgLMLLTdMArfXGStSM=,iv:IBaifx5u+2IiWcrpYaSTZenWgi9TgJ2ep7PzryDUHiE=,tag:+/Fsv9cT6Fj4w+6PRtx2pg==,type:str]
+    pgp: []
+    encrypted_regex: (access-key|password)
+    version: 3.7.1

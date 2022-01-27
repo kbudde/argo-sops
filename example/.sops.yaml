@@ -1,0 +1,13 @@
+anchors:
+  - &agekeys
+    age: >-
+      age10efzgcr0e55nvlxx5jlsr9gf2gx7cexnqqwtkx7efm04u6t5e5kq7yvdl4
+
+creation_rules:
+  - <<: *agekeys
+    path_regex: .*secret\.ya?ml$
+    encrypted_regex: ^data.*
+  - <<: *agekeys
+    path_regex: .*\.ya?ml$
+    encrypted_regex: "(access-key|password)"
+  #- <<: *agekeys

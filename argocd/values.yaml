@@ -1,0 +1,34 @@
+
+argo-cd:
+
+  repoServer:
+
+    extraContainers: 
+    - name: sops-plugin
+      command: [/var/run/argocd/argocd-cmp-server]
+      image: kbudde/argo-sops-plugin
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 999
+      volumeMounts:
+        - mountPath: /var/run/argocd
+          name: var-files
+        - mountPath: /home/argocd/cmp-server/plugins
+          name: plugins
+        - mountPath: /home/argocd/cmp-server/config/plugin.yaml
+          subPath: plugin.yaml
+          name: cmp-plugin
+        - mountPath: /age
+          name: age-key
+        - mountPath: /tmp
+          name: tmp-dir
+
+    volumes:
+      - name: cmp-plugin
+        configMap:
+          name: argo-sops-plugin
+      - name: age-key
+        secret:
+          secretName: age-key
+      - emptyDir: {}
+        name: tmp-dir

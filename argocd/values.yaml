@@ -14,26 +14,16 @@ argo-cd:
           name: var-files
         - mountPath: /home/argocd/cmp-server/plugins
           name: plugins
-        - mountPath: /home/argocd/cmp-server/config/plugin.yaml
-          subPath: plugin.yaml
-          name: sops-plugin
         - mountPath: /age
           name: age-key
         - mountPath: /tmp
           name: tmp-dir
 
     volumes:
-      - name: sops-plugin
-        configMap:
-          name: argo-sops-plugin
       - name: age-key
         secret:
           secretName: age-key
     
-    # volumeMounts:
-    # # mount plugin config into argoCD container
-    # - mountPath: /home/argocd/cmp-server/config/plugin.yaml
-    #   subPath: plugin.yaml
-    #   name: sops-plugin
+
   
 

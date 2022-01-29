@@ -2,15 +2,15 @@
 
 version: '3'
 
-vars:
-  GREETING: Hello, World!
 
 tasks:
-  default:
-    cmds:
-      - echo "{{.GREETING}}"
-    silent: true
-
   install:
     cmds:
       - helm upgrade --install argo ./argocd
+
+  docker:
+    desc: build and push docker file
+    dir: docker
+    cmds:
+      - docker build . -t kbudde/argo-sops-plugin:latest 
+      - docker push kbudde/argo-sops-plugin:latest 

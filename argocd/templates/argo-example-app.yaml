@@ -12,8 +12,6 @@ spec:
     path: ./example/app
     repoURL: https://github.com/kbudde/argo-sops
     targetRevision: first_version
-    # plugin:
-      # name: sops
   syncPolicy:
     automated:
       selfHeal: true

@@ -15,3 +15,5 @@ FROM alpine as final
 
 ENV SOPS_AGE_KEY_FILE /age/key.txt
 COPY --from=sops-builder /bin/sops /bin/sops
+ADD plugin.yaml /home/argocd/cmp-server/config/plugin.yaml
+ADD decrypt.sh /script/decrypt.sh

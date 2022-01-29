@@ -10,5 +10,6 @@ spec:
   discover:
     find:
       glob: "**/*"
+      #glob: ".sops.yaml"
   allowConcurrency: true
   lockRepo: false

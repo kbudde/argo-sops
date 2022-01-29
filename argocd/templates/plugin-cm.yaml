@@ -7,12 +7,16 @@ data:
     apiVersion: argoproj.io/v1alpha1
     kind: ConfigManagementPlugin
     metadata:
-      name: argo-sops-plugin
+      name: sops
     spec:
       version: v1.0
+      init:
+        command: [echo, "INIT CALLED"]
       generate:
-        command: [sh, -c, 'echo "{\"kind\": \"ConfigMap\", \"apiVersion\": \"v1\", \"metadata\": { \"name\": \"$ARGOCD_APP_NAME\", \"namespace\": \"$ARGOCD_APP_NAMESPACE\", \"annotations\": {\"Foo\": \"$FOO\", \"KubeVersion\": \"$KUBE_VERSION\", \"KubeApiVersion\": \"$KUBE_API_VERSIONS\",\"Bar\": \"baz\"}}}"']
-      discover: 
-        fileName: "./*"
+        command: [sh,c]
+        args: [find, ., -exec, sh, -c, 'echo "---";echo "# $1" >&2;sops -d $1 || cat $1', sh, {}, \;]
+      discover:
+        find:
+          glob: "**/*"
       allowConcurrency: true
       lockRepo: false

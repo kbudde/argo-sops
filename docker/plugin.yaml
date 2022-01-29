@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ConfigManagementPlugin
+metadata:
+  name: sops
+spec:
+  version: v1.0
+  generate:
+    command: ["sh", "-c"]
+    args: ["/script/decrypt.sh"]
+  discover:
+    find:
+      glob: "**/*"
+  allowConcurrency: true
+  lockRepo: false

@@ -5,6 +5,9 @@ anchors:
 
 creation_rules:
   - <<: *agekeys
-    path_regex: .*/.*\.ya?ml$
-    encrypted_regex: .*secret.*
+    path_regex: .*secret\.ya?ml$
+    encrypted_regex: ^data.*
+  - <<: *agekeys
+    path_regex: .*\.ya?ml$
+    encrypted_regex: "(access-key|password)"
   #- <<: *agekeys

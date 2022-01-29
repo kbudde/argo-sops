@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-app
+  namespace: default
+spec:
+  destination:
+    namespace: example-app
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./example/app
+    repoURL: https://github.com/kbudde/argo-sops
+    targetRevision: first_version
+    # plugin:
+      # name: sops
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - ApplyOutOfSyncOnly=true

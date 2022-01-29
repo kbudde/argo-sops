@@ -1,27 +1,6 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: example_map
+  name: myapp
 data:
-    secret: ENC[AES256_GCM,data:fN2LI88=,iv:rOhuOoPOyLY2IMR+oQc4iNq8melxw9alykn6vXtlJWE=,tag:gNnKgPYoruvTSbqqdeR2jA==,type:str]
-    normal: Value
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age10efzgcr0e55nvlxx5jlsr9gf2gx7cexnqqwtkx7efm04u6t5e5kq7yvdl4
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBIbGp4Vm1Kc0dadU5wbWVB
-            ZVc3S0RrYUlIdUxaK1JFQUg0MTl0bEhCYVRzCmV0ZjQ1K1NsaVgxRDJBZzgxWmVL
-            My91SmtnRS84a0RRb2NTZ0l3WHh3NE0KLS0tIE9DclZKS0VCekZnYm4ybkc0SWhZ
-            WEZnQS9VMjd6aU5MSjVMQ3ZWVVJFK1EKXsO5VItSRBXsvddHCtQ9uf08FG5FM9Re
-            dzxyIyjzKgCZt9GaXQV+JRX3y0QJnbAb/jqGf2uPXla9dGzrzAMrXw==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-01-27T23:13:28Z"
-    mac: ENC[AES256_GCM,data:Y1g5u+SdYVSmijVbytQ9mY9e5j/BjRSsPWin4tzEhl3hc41VjJTXS1aq3N+TD4BEMep54g4R3H/PsuNNFIVq7Ro7LXCWVhL7cBlAbRaJGyj0rUXB1zM58/FAlOMHLWIFZBrO6RkIjWQpxcgYljNy0wuu9225lgxf3Zxt1Sm2K7E=,iv:+L3o3nJkv2FwZgk2ts8P7QwBeUAFAn2T4+2cSVfhGAs=,tag:EH/VhBSazEyBLqyo5ru5Gw==,type:str]
-    pgp: []
-    encrypted_regex: .*secret.*
-    version: 3.7.1
+  key: value

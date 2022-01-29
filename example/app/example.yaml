@@ -2,10 +2,9 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: example
-type: Opaque
 data:
-    password: ENC[AES256_GCM,data:1SG/c4POZ9N544mPXwqX,iv:7DqejiOj8KNk7zDTONtlH9+Bo3ypqiWwxC7owkK1Ij4=,tag:MvLpHBha5256lirz6a9LUw==,type:str]
-    someValue: SomeRandomValue
+    password: ENC[AES256_GCM,data:BwKWesPCEymZSMMWq03vjY35KoA=,iv:zRnvI8oX1MQlSG6Obwlbh/AvJhR9/RSMU+GNDGKkTco=,tag:Q1MW11tT/eDeSNwFqNA4Cg==,type:str]
+    someotherValue: Tm9OZWVkVG9FbmNyeXB0
 sops:
     kms: []
     gcp_kms: []
@@ -15,14 +14,14 @@ sops:
         - recipient: age10efzgcr0e55nvlxx5jlsr9gf2gx7cexnqqwtkx7efm04u6t5e5kq7yvdl4
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB4dHNjeG90OW1IaWd3N0JS
-            eHhoQmU5ZXRMRWxvUmE3WXpIaHpoNVFucjBVCjhvVWtOZ3N1dWx1RWdLVUc0alhJ
-            UVpid1ZPM0NqT3BPNFdiOHBWeDJxQXcKLS0tIGgwcTZadWpVSVVPbWtxVWVLVVFH
-            Mk5sTDEyZFcwT2tDZllmcU43cFhDcDQKjBpGFu3zp/BZSn4YHezah67shR3VnCRr
-            cHKwMNTcCvOLidIl75tkFvsBFzpkSL1HcCUTzc3wdDuz9EW0FKSUlg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAxTGJsOU5VMm9LWDBEUDNj
+            Qk1wclIzekcyWnhpN0c4S1BHSzBNS3ZwbHlRCnFpOXlaZ3pJYlVHNnc1QTYralls
+            K2VjY2ZobU9PSmZsNDNueTZNL1YxVEUKLS0tIGRQUCtPNjE4ZWZ2UWF3Q2N2UE0r
+            WmtVVzdFNnoxblFBSGVhQ3lsMm5KU00KpTaAYIg9rZ5qiCRpz6ju8rb8Z0JC0+C8
+            LeCBByrNSFQInjIuBd4QWnhbsVWUM3VXD1B3o8i3wnpstZ1nDAKnZw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-01-29T21:33:46Z"
-    mac: ENC[AES256_GCM,data:xU9ExpL3f4ES0M+vkQ/uBY6a8T30hPqu/AXS0SC9f8DesCmOEiVJ4/94vjiMSONbSVpHg+ARqYW+GIoW7wru46tptZfub9OmuCRFFKZ4oC7X0rk/9zXrh30T9UhJrBg2kcj6Bs7K3yLwJOUsx8LvEIhxdKq5dP2xF/RiWEYuH6o=,iv:isIjtkghraEKO3SC6wYf8QfB2BSSpG94f+HgDl7Z2Bs=,tag:Q0wrIYXPoIV2I4A+DeoqzQ==,type:str]
+    lastmodified: "2022-01-29T22:27:19Z"
+    mac: ENC[AES256_GCM,data:02cLeb0slE0jyHnLbi2oQnI6YL2W2p1D2KpRIKXxBxKscbvG9WnLOhj96mCo4UqRDgmLQOuyuY+JA6PxVro9dLgaW8tGkulMIu/d6yul/lgpJeY1BpeMnfqL/sVDAkWGW2SdhPQTo5WUnmpXYHj8Ike4lycC0bUqC1GzRv5ItZA=,iv:O51DfbpveMGtJgr66WnbHB2kDtxg8O5hlxmouS4DZuc=,tag:f3jNXAO9815i90blnmdd+Q==,type:str]
     pgp: []
     encrypted_regex: (access-key|password)
     version: 3.7.1

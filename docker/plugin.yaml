@@ -5,7 +5,7 @@ metadata:
 spec:
   version: v1.0
   generate:
-    command: ["sh", "-c"]
+    command: ["sh"]
     args: ["/script/decrypt.sh"]
   discover:
     find:

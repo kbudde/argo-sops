@@ -1,6 +1,26 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: myapp
+    name: myapp
 data:
-  key: value
+    key: value
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age10efzgcr0e55nvlxx5jlsr9gf2gx7cexnqqwtkx7efm04u6t5e5kq7yvdl4
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMNWFjU2x6RWh0S3VkZ25P
+            OTJheTVnNktHRVdQZ3BmZHc1RlVSQ3hRM3kwCmg3bzFLNkxUYTA4VmszWW5PcFIy
+            dDhocTcwdjE5Mm12anlmUFMwUFI3VW8KLS0tIHd2UWdocDZhSituRHlVeGhYMlVk
+            S2xJcWhuSy9wOXMrM0RrR2doWUU0aEkK9F7a+gVCprIdgqksQQL3WVQcRzfZM0d/
+            2QqcKZZ7+OlJVclnUa+6ecb932Pk3g3zr1w6gccKXYYaf9YnnXpd6g==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-01-29T22:27:19Z"
+    mac: ENC[AES256_GCM,data:MH+8rs4DNUX6HVdiQFMndshxA8AmpJF/RqCZ3rRZzHKyr2RcEtxWxzYwNpkCl7dT6T/aDgomTA3M7yDIXpd/8h/DPZCHgavf3tp94Ayix/99uvKPfhqZw6J7b4YziEHkcSLzbvbGiWWwtcNByXfE0T/WDt/ydPDpeiEASsZdvCc=,iv:jSqcycjqDLmOsug6DoM280fbStpwwvVZ6G66Cj+b7g0=,tag:OZk+x8+wM0SeaiLBhyysZQ==,type:str]
+    pgp: []
+    encrypted_regex: (access-key|password)
+    version: 3.7.1
